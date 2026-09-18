@@ -15,20 +15,29 @@ namespace Vistas
             string usuario = txtUsuario.Text.Trim();
             string password = txtPassword.Password;
 
+            string rol = null;
+
             if (usuario == "admin" && password == "admin123")
             {
-                MessageBox.Show("Bienvenido Administrador", "Acceso Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
+                rol = "Admin";
             }
             else if (usuario == "vendedor" && password == "vend123")
             {
-                MessageBox.Show("Bienvenido Vendedor", "Acceso Correcto", MessageBoxButton.OK, MessageBoxImage.Information);
+                rol = "Vendedor";
             }
-            else
+
+            if (rol == null)
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.", "Error de Autenticación", MessageBoxButton.OK, MessageBoxImage.Error);
                 txtPassword.Clear();
                 txtUsuario.Focus();
+                return;
             }
+
+            MainWindow menu = new MainWindow(usuario, rol);
+            Application.Current.MainWindow = menu;
+            menu.Show();
+            Close();
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
