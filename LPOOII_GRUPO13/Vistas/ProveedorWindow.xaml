@@ -16,10 +16,10 @@
         <Grid Grid.Row="2" Margin="30,10">
             <Grid.ColumnDefinitions><ColumnDefinition Width="130"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
             <Grid.RowDefinitions><RowDefinition Height="40"/><RowDefinition Height="40"/><RowDefinition Height="40"/><RowDefinition Height="40"/></Grid.RowDefinitions>
-            <Label Grid.Row="0" Content="CUIT:"/><TextBox Grid.Row="0" Grid.Column="1" x:Name="txtCUIT" Height="25" MaxLength="11"/>
-            <Label Grid.Row="1" Content="Razón social:"/><TextBox Grid.Row="1" Grid.Column="1" x:Name="txtRazonSocial" Height="25" MaxLength="80"/>
-            <Label Grid.Row="2" Content="Domicilio:"/><TextBox Grid.Row="2" Grid.Column="1" x:Name="txtDomicilio" Height="25" MaxLength="100"/>
-            <Label Grid.Row="3" Content="Teléfono:"/><TextBox Grid.Row="3" Grid.Column="1" x:Name="txtTelefono" Height="25" MaxLength="15"/>
+            <Label Grid.Row="0" Content="CUIT:"/><TextBox Grid.Row="0" Grid.Column="1" x:Name="txtCUIT" Height="25" MaxLength="11" Style="{StaticResource EstiloTextBox}"/>
+            <Label Grid.Row="1" Content="Razón social:"/><TextBox Grid.Row="1" Grid.Column="1" x:Name="txtRazonSocial" Height="25" MaxLength="80" Style="{StaticResource EstiloTextBox}"/>
+            <Label Grid.Row="2" Content="Domicilio:"/><TextBox Grid.Row="2" Grid.Column="1" x:Name="txtDomicilio" Height="25" MaxLength="100" Style="{StaticResource EstiloTextBox}"/>
+            <Label Grid.Row="3" Content="Teléfono:"/><TextBox Grid.Row="3" Grid.Column="1" x:Name="txtTelefono" Height="25" MaxLength="15" Style="{StaticResource EstiloTextBox}"/>
         </Grid>
         <StackPanel Grid.Row="3" Orientation="Horizontal">
             <Button x:Name="btnPrimero" Content="Primero" Width="75" Margin="3" Style="{StaticResource EstiloBoton}"/>

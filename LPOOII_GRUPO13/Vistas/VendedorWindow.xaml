@@ -16,9 +16,9 @@
         <Grid Grid.Row="2" Margin="30,10">
             <Grid.ColumnDefinitions><ColumnDefinition Width="130"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
             <Grid.RowDefinitions><RowDefinition Height="40"/><RowDefinition Height="40"/><RowDefinition Height="40"/></Grid.RowDefinitions>
-            <Label Grid.Row="0" Content="Legajo:"/><TextBox Grid.Row="0" Grid.Column="1" x:Name="txtLegajo" Height="25" MaxLength="20"/>
-            <Label Grid.Row="1" Content="Apellido:"/><TextBox Grid.Row="1" Grid.Column="1" x:Name="txtApellido" Height="25" MaxLength="50"/>
-            <Label Grid.Row="2" Content="Nombre:"/><TextBox Grid.Row="2" Grid.Column="1" x:Name="txtNombre" Height="25" MaxLength="50"/>
+            <Label Grid.Row="0" Content="Legajo:"/><TextBox Grid.Row="0" Grid.Column="1" x:Name="txtLegajo" Height="25" MaxLength="20" Style="{StaticResource EstiloTextBox}"/>
+            <Label Grid.Row="1" Content="Apellido:"/><TextBox Grid.Row="1" Grid.Column="1" x:Name="txtApellido" Height="25" MaxLength="50" Style="{StaticResource EstiloTextBox}"/>
+            <Label Grid.Row="2" Content="Nombre:"/><TextBox Grid.Row="2" Grid.Column="1" x:Name="txtNombre" Height="25" MaxLength="50" Style="{StaticResource EstiloTextBox}"/>
         </Grid>
         <StackPanel Grid.Row="3" Orientation="Horizontal">
             <Button x:Name="btnPrimero" Content="Primero" Width="75" Margin="3" Style="{StaticResource EstiloBoton}"/>
