@@ -21,6 +21,12 @@ namespace Vistas
 
         private void AplicarPermisos(string rol)
         {
+            // Acceso denegado por defecto: cualquier rol desconocido queda sin permisos.
+            btn_Proveedores.IsEnabled = false;
+            btn_Clientes.IsEnabled = false;
+            btn_Productos.IsEnabled = false;
+            btn_Vendedores.IsEnabled = false;
+
             if (rol == "Admin")
             {
                 btn_Proveedores.IsEnabled = true;
@@ -33,7 +39,6 @@ namespace Vistas
                 btn_Proveedores.IsEnabled = true;
                 btn_Clientes.IsEnabled = true;
                 btn_Productos.IsEnabled = true;
-                btn_Vendedores.IsEnabled = false;
             }
         }
 
